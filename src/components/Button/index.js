@@ -9,6 +9,9 @@ function Button({
     href,
     primary = false,
     outline = false,
+    text = false,
+    rounded = false,
+    disabled,
     small = false,
     large = false,
     children,
@@ -29,9 +32,21 @@ function Button({
         Comp = 'a';
     }
 
+    // Remove event listener when btn is disabled
+    if (disabled) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
+            }
+        });
+    }
+
     const classes = cx('wrapper', {
         primary,
         outline,
+        text,
+        rounded,
+        disabled,
         small,
         large,
     });
