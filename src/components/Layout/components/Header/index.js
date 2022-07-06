@@ -29,10 +29,12 @@ const MENU_ITEMS = [
             title: 'language',
             data: [
                 {
+                    type: 'language',
                     code: 'en',
                     title: 'English',
                 },
                 {
+                    type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
                 },
@@ -61,7 +63,13 @@ function Header() {
 
     // Handle
     const handleMenuChange = (menuItem) => {
-        console.log('menuItem', menuItem);
+        switch (menuItem.type) {
+            case 'language':
+                console.log('test');
+                // Handle change language
+                break;
+            default:
+        }
     };
 
     return (
