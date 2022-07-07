@@ -26,6 +26,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { Inbox, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -75,7 +77,6 @@ function Header() {
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
             case 'language':
-                console.log('test');
                 // Handle change language
                 break;
             default:
@@ -150,6 +151,16 @@ function Header() {
                                     <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
+                            {/* <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon width="2.75rem" height="2.2rem" />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <Inbox />
+                                </button>
+                            </Tippy> */}
                         </>
                     ) : (
                         <>
@@ -159,7 +170,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://scontent.fhan5-11.fna.fbcdn.net/v/t1.6435-1/170209747_2940250396251866_4585798617590460877_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=263vzWI2m5gAX-N_cn5&_nc_ht=scontent.fhan5-11.fna&oh=00_AT-doMpKXiYnAlfiUKfIHH9-Daj1EGsKe1WPcOQ_oSI6Kg&oe=62E953BD"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Nang Thai"
