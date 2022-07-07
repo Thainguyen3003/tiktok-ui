@@ -174,6 +174,7 @@ function Header() {
                                 src="https://scontent.fhan5-11.fna.fbcdn.net/v/t1.6435-1/170209747_2940250396251866_4585798617590460877_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=263vzWI2m5gAX-N_cn5&_nc_ht=scontent.fhan5-11.fna&oh=00_AT-doMpKXiYnAlfiUKfIHH9-Daj1EGsKe1WPcOQ_oSI6Kg&oe=62E953BD"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Nang Thai"
+                                fallback="https://i.pinimg.com/236x/06/74/b7/0674b76fc24b4e81131deacea139ba8a.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
