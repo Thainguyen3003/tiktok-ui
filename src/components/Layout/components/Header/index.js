@@ -151,7 +151,7 @@ function Header() {
                                     <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
-                            {/* <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                            <Tippy delay={[0, 200]} content="Message" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <MessageIcon width="2.75rem" height="2.2rem" />
                                 </button>
@@ -159,8 +159,9 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <Inbox />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
-                            </Tippy> */}
+                            </Tippy>
                         </>
                     ) : (
                         <>
